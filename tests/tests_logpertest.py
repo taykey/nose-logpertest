@@ -1,6 +1,5 @@
 __author__ = 'roy'
 
-import os
 import logging
 
 logger = logging.getLogger()
@@ -22,18 +21,15 @@ class TestA():
 
     def test2(self):
         logger.info("I'm in test2")
-        logger.info(os.getpid())
-        assert 5 == 5
+        assert 2 == 2
 
     def test3(self):
         logger.info("I'm in test3")
-        logger.info(os.getpid())
-        assert 5 == 5
+        assert 3 == 3
 
     def test4(self):
         logger.info("I'm in test4")
-        logger.info(os.getpid())
-        assert 5 == 5
+        assert 4 == 4
 
 
 class TestB():
@@ -48,23 +44,19 @@ class TestB():
 
     def test1(self):
         logger.info("I'm in test1")
-        logger.info(os.getpid())
         assert 1 == 1
 
     def test2(self):
         logger.info("I'm in test2")
-        logger.info(os.getpid())
-        assert 5 == 5
+        assert 2 == 2
 
     def test3(self):
         logger.info("I'm in test3")
-        logger.info(os.getpid())
-        assert 5 == 5
+        assert 3 == 3
 
     def test4(self):
         logger.info("I'm in test4")
-        logger.info(os.getpid())
-        assert 5 == 5
+        assert 4 == 4
 
 
 
