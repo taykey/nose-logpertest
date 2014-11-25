@@ -1,10 +1,12 @@
 __author__ = 'roy'
 
-from nose.plugins.base import Plugin
 import os
 import logging
 from logging import FileHandler
 import time
+
+from nose.plugins.base import Plugin
+
 
 log = logging.getLogger()
 
@@ -28,10 +30,14 @@ class LogPerTest(Plugin):
 
     def beforeTest(self, test):
         log = logging.getLogger()
-        if not os.path.exists(self.logs_run_dir + '/' + str(test.test.context)):
-            os.makedirs(self.logs_run_dir + '/' + str(test.test.context))
-        test.log_handler = FileHandler(self.logs_run_dir + '/' +
-                                       str(test.test.context) + '/' + str(test))
+
+        # check or create the directory of the current test context exist
+        dir_path = os.path.join(self.logs_run_dir, str(test.test.context))
+        if not os.path.exists(dir_path):
+            os.makedirs(dir_path)
+
+        # add a file handler to write to the the test log file
+        test.log_handler = FileHandler(os.path.join(dir_path, str(test)))
         log.addHandler(test.log_handler)
 
     def afterTest(self, test):
