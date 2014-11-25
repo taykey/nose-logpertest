@@ -8,8 +8,6 @@ import time
 from nose.plugins.base import Plugin
 
 
-log = logging.getLogger()
-
 logs_run_dir = time.strftime("%Y%m%d-%H%M%S")
 
 
@@ -41,4 +39,5 @@ class LogPerTest(Plugin):
         log.addHandler(test.log_handler)
 
     def afterTest(self, test):
+        log = logging.getLogger()
         log.removeHandler(test.log_handler)
