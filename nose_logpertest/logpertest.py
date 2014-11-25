@@ -22,6 +22,7 @@ class LogPerTest(Plugin):
         super(LogPerTest, self).configure(options, conf)
         if not self.enabled:
             return
+
         self.logs_run_dir = logs_run_dir
         if not os.path.exists(self.logs_run_dir):
             os.makedirs(self.logs_run_dir)

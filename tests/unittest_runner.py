@@ -23,7 +23,7 @@ class TestLogPerTest(unittest.TestCase):
         remove_unneeded_log_dirs()
 
     def test_file_per_test(self):
-
+        """assert the existence of log files after running nose tests"""
         # get all the log files that were created by the nose run
         log_files_a = [os.path.basename(file) for file in
                        glob.glob(A_DIR_PATH + '/*')]

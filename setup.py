@@ -1,3 +1,5 @@
+__author__ = 'roy'
+
 import os
 
 from setuptools import setup, find_packages
@@ -14,7 +16,7 @@ requires = [
 
 setup(name='nose-logpertest',
       version='0.0.1',
-      description='Logging plugin to create log per test',
+      description='Logging nose plugin to create log per test',
       long_description=README + '\n\n' + CHANGES,
       classifiers=[
           "Programming Language :: Python",
