@@ -1,7 +1,11 @@
-nose-logpertest
-======================
+This nose plugin enables you to provide a log file for each running test
 
-Python nosetests plugin provide a log file per each test
+==========
+Installing
+==========
 
+You can install `nose-logpertest` plugin using pip:
 
-pip install nose-logpertest
+.. code-block:: shell
+
+    $ pip install nose-logpertest
