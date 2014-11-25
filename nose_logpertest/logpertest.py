@@ -8,8 +8,6 @@ import time
 from nose.plugins.base import Plugin
 
 
-log = logging.getLogger()
-
 logs_run_dir = time.strftime("%Y%m%d-%H%M%S")
 
 
@@ -32,7 +30,7 @@ class LogPerTest(Plugin):
         log = logging.getLogger()
 
         # check or create the directory of the current test context exist
-        dir_path = os.path.join(self.logs_run_dir, str(test.test.context))
+        dir_path = os.path.join(self.logs_run_dir, str(test.context))
         if not os.path.exists(dir_path):
             os.makedirs(dir_path)
 
@@ -41,4 +39,5 @@ class LogPerTest(Plugin):
         log.addHandler(test.log_handler)
 
     def afterTest(self, test):
+        log = logging.getLogger()
         log.removeHandler(test.log_handler)

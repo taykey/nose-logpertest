@@ -1,12 +1,10 @@
 __author__ = 'roy'
 
-import time
 import os
 import logging
-from logging import FileHandler, StreamHandler
-from another_module import say_hello
 
 logger = logging.getLogger()
+
 
 class TestA():
 
@@ -19,32 +17,23 @@ class TestA():
         logger.info("im in teardown")
 
     def test1(self):
-        print os.getpid()
         logger.info("I'm in test1")
-        logger.info(os.getpid())
-        say_hello()
-        assert 1==1
+        assert 1 == 1
 
     def test2(self):
-        print os.getpid()
         logger.info("I'm in test2")
         logger.info(os.getpid())
-        say_hello()
-        assert 5==5
+        assert 5 == 5
 
     def test3(self):
-        print os.getpid()
         logger.info("I'm in test3")
         logger.info(os.getpid())
-        say_hello()
-        assert 5==5
+        assert 5 == 5
 
     def test4(self):
-        print os.getpid()
         logger.info("I'm in test4")
         logger.info(os.getpid())
-        say_hello()
-        assert 5==5
+        assert 5 == 5
 
 
 class TestB():
@@ -58,32 +47,24 @@ class TestB():
         logger.info("im in teardown")
 
     def test1(self):
-        print os.getpid()
         logger.info("I'm in test1")
         logger.info(os.getpid())
-        say_hello()
-        assert 1==1
+        assert 1 == 1
 
     def test2(self):
-        print os.getpid()
         logger.info("I'm in test2")
         logger.info(os.getpid())
-        say_hello()
-        assert 5==5
+        assert 5 == 5
 
     def test3(self):
-        print os.getpid()
         logger.info("I'm in test3")
         logger.info(os.getpid())
-        say_hello()
-        assert 5==5
+        assert 5 == 5
 
     def test4(self):
-        print os.getpid()
         logger.info("I'm in test4")
         logger.info(os.getpid())
-        say_hello()
-        assert 5==5
+        assert 5 == 5
 
 
 
