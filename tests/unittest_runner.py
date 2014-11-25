@@ -3,10 +3,10 @@ __author__ = 'roy'
 import os
 import glob
 import shutil
+import unittest
 
 from nose import run
 from nose_logpertest.logpertest import LogPerTest
-import unittest
 
 from config import A_DIR_PATH, B_DIR_PATH, EXPECTED_A, EXPECTED_B
 
@@ -23,7 +23,7 @@ class TestLogPerTest(unittest.TestCase):
         remove_unneeded_log_dirs()
 
     def test_file_per_test(self):
-
+        """assert the existence of log files after running nose tests"""
         # get all the log files that were created by the nose run
         log_files_a = [os.path.basename(file) for file in
                        glob.glob(A_DIR_PATH + '/*')]
