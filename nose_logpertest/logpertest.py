@@ -12,6 +12,12 @@ logs_run_dir = time.strftime("%Y%m%d-%H%M%S")
 
 
 class LogPerTest(Plugin):
+    """
+    This plugin create a log file per each tests run by nose.
+
+    Usage examples:
+      > nosetests --with-logpertest
+    """
 
     name = 'logpertest'
 
