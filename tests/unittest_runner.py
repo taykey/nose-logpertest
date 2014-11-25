@@ -3,10 +3,10 @@ __author__ = 'roy'
 import os
 import glob
 import shutil
+import unittest
 
 from nose import run
 from nose_logpertest.logpertest import LogPerTest
-import unittest
 
 from config import A_DIR_PATH, B_DIR_PATH, EXPECTED_A, EXPECTED_B
 
