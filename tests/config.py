@@ -16,3 +16,6 @@ EXPECTED_B = [expected_test_name.format('B', '1'),
 
 A_DIR_PATH = './*/tests.tests_logpertest.TestA/'
 B_DIR_PATH = './*/tests.tests_logpertest.TestB/'
+
+
+LINES = {0: "im in setup", 1: "im in test", 2: "im in teardown"}
