@@ -16,19 +16,19 @@ class TestA():
         logger.info("im in teardown")
 
     def test1(self):
-        logger.info("I'm in test1")
+        logger.info("im in test 1")
         assert 1 == 1
 
     def test2(self):
-        logger.info("I'm in test2")
+        logger.info("im in test 2")
         assert 2 == 2
 
     def test3(self):
-        logger.info("I'm in test3")
+        logger.info("im in test 3")
         assert 3 == 3
 
     def test4(self):
-        logger.info("I'm in test4")
+        logger.info("im in test 4")
         assert 4 == 4
 
 
@@ -43,19 +43,19 @@ class TestB():
         logger.info("im in teardown")
 
     def test1(self):
-        logger.info("I'm in test1")
+        logger.info("im in test 1")
         assert 1 == 1
 
     def test2(self):
-        logger.info("I'm in test2")
+        logger.info("im in test 2")
         assert 2 == 2
 
     def test3(self):
-        logger.info("I'm in test3")
+        logger.info("im in test 3")
         assert 3 == 3
 
     def test4(self):
-        logger.info("I'm in test4")
+        logger.info("im in test 4")
         assert 4 == 4
 
 

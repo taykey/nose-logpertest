@@ -8,7 +8,7 @@ import unittest
 from nose import run
 from nose_logpertest.logpertest import LogPerTest
 
-from config import A_DIR_PATH, B_DIR_PATH, EXPECTED_A, EXPECTED_B
+from config import A_DIR_PATH, B_DIR_PATH, EXPECTED_A, EXPECTED_B, LINES
 
 
 class TestLogPerTest(unittest.TestCase):
@@ -24,7 +24,7 @@ class TestLogPerTest(unittest.TestCase):
 
     def test_file_per_test(self):
         """assert the existence of log files after running nose tests"""
-        # get all the log files that were created by the nose run
+        # get all the log files names that were created by the nose run
         log_files_a = [os.path.basename(file) for file in
                        glob.glob(A_DIR_PATH + '/*')]
 
@@ -34,6 +34,21 @@ class TestLogPerTest(unittest.TestCase):
         # assert the files that were created suits the expected files
         assert sorted(log_files_a) == sorted(EXPECTED_A)
         assert sorted(log_files_b) == sorted(EXPECTED_B)
+
+    def test_file_content(self):
+        """assert the content of the log file is correct"""
+        # get the path to the log files
+        log_files_a = [file for file in
+               glob.glob(A_DIR_PATH + '/*')]
+
+        log_files_b = [file for file in
+                       glob.glob(B_DIR_PATH + '/*')]
+
+        # make sure the content of each log file is correct
+        for log_file in log_files_a + log_files_b:
+            with open(log_file, 'r') as file:
+                for line_num, line in enumerate(file):
+                    assert line.startswith(LINES[line_num])
 
 
 def remove_unneeded_log_dirs():
