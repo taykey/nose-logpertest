@@ -32,7 +32,7 @@ setup(name='nose-logpertest',
       url='https://github.com/taykey/nose-logpertest',
       packages=find_packages(),
       keywords='nosetest logging',
-      include_package_data=False,
+      include_package_data=True,
       zip_safe=False,
       entry_points="""\
       [nose.plugins.0.10]
