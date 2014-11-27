@@ -1,5 +1,5 @@
-This nose plugin creates a log file per each test run by nose,
-consisting the logs of that specific test
+This plugin creates a log file per test run by nose,
+holding the logs of that specific test
 
 ==========
 Installing
@@ -51,7 +51,7 @@ running it with `nosetest` using `nose-logpertest` plugin:
 
 .. code-block:: shell
 
-    nosetest --with-logpertest
+    nosetests --with-logpertest
 
 will cause the creation of the following log files:
 
@@ -66,7 +66,7 @@ will cause the creation of the following log files:
             test1
             test2
 
-where each file consists the logs of that specific test
+where each file holds the logs of that specific test
 
 and `20141125-120146` is the running time of the tests
 
@@ -84,6 +84,7 @@ Authors
     Maroun Maroun
 
     Sergey Ragatsky
+:Version: 0.0.1 of 27/11/2014
 
 
 
