@@ -1,4 +1,5 @@
-This nose plugin creates a log file per each test run by nose
+This nose plugin creates a log file per each test run by nose,
+consisting the logs of that specific test
 
 ==========
 Installing
