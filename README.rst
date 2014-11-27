@@ -56,14 +56,16 @@ will cause the creation of the following log files:
 
 .. code-block:: shell
 
-    <current running time>
+    <`current running time`>
         <TestA>
-                test1
-                test2
-                test3
+            test1
+            test2
+            test3
         <TestB>
-                test1
-                test2
+            test1
+            test2
+
+where each file consists the logs of that specific test
 
 ========
 Authors
