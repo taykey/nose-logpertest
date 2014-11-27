@@ -56,7 +56,7 @@ will cause the creation of the following log files:
 
 .. code-block:: shell
 
-    <`current running time`>
+    <20141125-120146>
         <TestA>
             test1
             test2
@@ -66,6 +66,7 @@ will cause the creation of the following log files:
             test2
 
 where each file consists the logs of that specific test
+and `20141125-120146` is the running time of the tests
 
 ========
 Authors
