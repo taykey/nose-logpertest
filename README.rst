@@ -66,9 +66,7 @@ will cause the creation of the following log files:
             test1
             test2
 
-where each file holds the logs of that specific test
-
-and `20141125-120146` is the running time of the tests
+where each file holds the logs of that specific test and `20141125-120146` is the running time of the tests
 
 ========
 Authors
