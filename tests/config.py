@@ -18,4 +18,4 @@ A_DIR_PATH = './*/tests.tests_logpertest.TestA/'
 B_DIR_PATH = './*/tests.tests_logpertest.TestB/'
 
 
-LINES = {0: "im in setup", 1: "im in test", 2: "im in teardown"}
+LINES = {0: "I'm in setup", 1: "I'm in test", 2: "I'm in teardown"}
