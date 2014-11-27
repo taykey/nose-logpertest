@@ -54,12 +54,14 @@ running it with `nosetest` using `nose-logpertest` plugin:
 
 will cause the creation of the following log files:
 
+.. code-block:: shell
+
     <current running time>
-        <Test A>
+        <TestA>
                 test1
                 test2
                 test3
-        <Test B>
+        <TestB>
                 test1
                 test2
 
